@@ -1,26 +1,46 @@
 @import "tailwindcss";
 
+/* Base palette derived from project requirements */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f9f3dc; /* pale yellow */
+  --foreground: #1e1b18; /* near-black dark brown */
+  --accent-light: #b6e7c8; /* light green (leaves) */
+  --accent-dark: #2f4a32; /* dark green (navbar) */
+  --accent-mid: #6aa57a; /* optional mid green for gradients */
+  --radius-pill: 9999px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* Theme tokens mapped through CSS variables (remove @theme for compatibility) */
+/* Tailwind will still expose utilities; we can add plugin config later for formal tokens. */
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #12100c; /* deeper muted yellow-brown */
+    --foreground: #f5f1e4;
+    --accent-light: #7fd3a1;
+    --accent-dark: #203522;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Utility classes (until Tailwind custom tokens are wired) */
+.bg-pale-yellow { background-color: var(--background); }
+.bg-accent-light { background-color: var(--accent-light); }
+.bg-accent-dark { background-color: var(--accent-dark); }
+.text-foreground { color: var(--foreground); }
+.text-accent-dark { color: var(--accent-dark); }
+.text-accent-light { color: var(--accent-light); }
+.border-accent-light { border-color: var(--accent-light); }
+.border-accent-dark { border-color: var(--accent-dark); }
+
+/* Gradients */
+.gradient-green {
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent-mid));
 }
