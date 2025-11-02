@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import clsx from "clsx";
 
-const SECTIONS = ["work", "about", "play", "notes", "contact"] as const;
+const SECTIONS = ["about", "work", "contact"] as const;
 
 type Section = typeof SECTIONS[number];
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
+import { Nunito, Limelight, Fondamento } from "next/font/google";
 import Navbar from "./components/Navbar";
 import PlantTrees from "./components/PlantTrees";
 import "./globals.css";
@@ -10,6 +10,8 @@ export const metadata: Metadata = {
 };
 
 const nunito = Nunito({ subsets: ["latin"], variable: "--font-sans" });
+const limelight = Limelight({ subsets: ["latin"], weight: "400", variable: "--font-display" });
+const fondamento = Fondamento({ subsets: ["latin"], weight: "400", variable: "--font-mono" });
 
 export default function RootLayout({
   children,
