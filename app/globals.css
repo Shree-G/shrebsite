@@ -4,7 +4,8 @@
 :root {
   --background: #f9f3dc; /* pale yellow */
   --foreground: #1e1b18; /* near-black dark brown */
-  --accent-light: #b6e7c8; /* light green (leaves) */
+  --accent-light: #b6e7c8;
+  /* --accent-light: #00c37f; */
   --accent-dark: #2f4a32; /* dark green (navbar) */
   --accent-mid: #6aa57a; /* optional mid green for gradients */
   --radius-pill: 9999px;
@@ -17,7 +18,8 @@
   :root {
     --background: #12100c; /* deeper muted yellow-brown */
     --foreground: #f5f1e4;
-    --accent-light: #7fd3a1;
+    /* --accent-light: #7fd3a1; */
+    --accent-light: #00c37f;
     --accent-dark: #203522;
   }
 }

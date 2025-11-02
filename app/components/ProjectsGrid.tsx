@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
+
 interface Repo {
   id: number;
   name: string;
@@ -44,9 +45,9 @@ const ProjectsGrid: React.FC = () => {
           key={repo.id}
           href={repo.html_url}
           target="_blank"
-          className="group rounded-3xl border border-accent-light/60 bg-white/60 hover:bg-accent-light/50 transition shadow-sm p-5 flex flex-col gap-3 relative overflow-hidden"
+          className="group rounded-3xl bg-accent-light shadow-sm p-5 flex flex-col gap-3 relative overflow-hidden transition transform transition-transform duration-200 hover:scale-110"
         >
-          <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition" style={{background:"radial-gradient(circle at 30% 20%, var(--accent-light), transparent)"}} />
+          <div className="absolute inset-0 pointer-events-none opacity-0 transition" style={{background:"radial-gradient(circle at 30% 20%, var(--accent-light), transparent)"}} />
           <div className="flex items-center justify-between">
             <span className="text-xs px-3 py-1 rounded-full bg-accent-dark text-accent-light font-semibold tracking-wide">
               {repo.language || "Unknown"}

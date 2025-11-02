@@ -23,8 +23,8 @@ export default function RootLayout({
       <body className={`${nunito.variable} bg-pale-yellow`}>
         <div className="relative">
           <Navbar />
-          <PlantTrees />
-          {children}
+          <PlantTrees>{children}</PlantTrees>
+          
         </div>
       </body>
     </html>

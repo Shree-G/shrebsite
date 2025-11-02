@@ -1,6 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import clsx from "clsx";
+import { Limelight } from "next/font/google";
+
+const limelight = Limelight({ subsets: ["latin"], weight: "400", variable: "--font-display" });
 
 const SECTIONS = ["about", "work", "contact"] as const;
 
@@ -32,7 +35,7 @@ export const Navbar: React.FC = () => {
 
   return (
     <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50">
-      <div className="flex gap-2 px-6 py-3 rounded-full gradient-green shadow-lg border border-accent-dark/30 backdrop-blur-sm">
+      <div className="flex gap-2 px-6 py-3 rounded-full gradient-green shadow-lg  backdrop-blur-sm">
         {SECTIONS.map((s) => (
           <a
             key={s}
@@ -42,7 +45,7 @@ export const Navbar: React.FC = () => {
               s === active && "bg-accent-light text-accent-dark shadow-sm"
             )}
           >
-            <span className="capitalize">{s}</span>
+            <span className={`capitalize ${limelight.className}`}>{s}</span>
           </a>
         ))}
       </div>
